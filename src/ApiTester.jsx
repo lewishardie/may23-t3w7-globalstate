@@ -2,8 +2,8 @@ import { useContext } from "react"
 import { ConnectionContext } from "./context/ConnectionContext"
 
 export default function ApiTester() {
-
-    let connectionData = useContext(ConnectionContext)
+    //-- 
+    // let connectionData = useContext(ConnectionContext)
     let {url} = useContext(ConnectionContext)
 
     return(

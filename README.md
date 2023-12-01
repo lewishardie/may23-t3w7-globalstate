@@ -9,3 +9,5 @@
 - React reducers
 - Combining global state with reducers
 
+
+Components use .jsx
