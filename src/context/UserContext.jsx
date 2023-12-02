@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react"
-import { userReducer } from "./UserReducer";
+import { userReducer } from "./userReducer";
+
 
 const defaultUserData = {
     jwt: "not empty jwt"

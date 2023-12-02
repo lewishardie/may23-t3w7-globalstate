@@ -1,8 +1,16 @@
 export const userReducer = (previousState, instructions) => {
-    //-- ... spread operator, to reference the previous state but make it a new object
+    //-- ... spread operator, used to copy elements from an array
+    //-- into a new array without affecting the original
     let newState = {...previousState}
     
+    console.log(instructions)
+    
     switch (instructions.type){
+        
+        case "setJwt":
+            newState = instructions.data;
+            return newState;
+
         case "login":
             newState = "Pretend a fetch request finished and returned a JWT";
             return newState;
@@ -10,10 +18,10 @@ export const userReducer = (previousState, instructions) => {
         case "logout":
             // newState = "";
             // return newState;
-            return ""
+            return "";
 
         default:
-            return newState
+            return newState;
 
     }
 }
