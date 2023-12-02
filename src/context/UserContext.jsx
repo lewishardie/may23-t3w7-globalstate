@@ -1,7 +1,7 @@
 import { createContext, useState } from "react"
 
 const defaultUserData = {
-    jwt: ""
+    jwt: "not empty jwt"
 
 }
 
@@ -10,7 +10,12 @@ export const UserContext = createContext(defaultUserData);
 export default function UserGlobalData(props){
     const [userData, setUserData] = useState(defaultUserData)
     return(
-        <UserContext.Provider value={{userData: userData, setUserData: setUserData}}>
+        <UserContext.Provider value={
+            {
+                userData: userData, 
+                setUserData: setUserData
+            }
+        }>
             {props.children}
         </UserContext.Provider>
     )
